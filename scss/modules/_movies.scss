@@ -1,0 +1,81 @@
+  
+.movies {
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 300px;
+    font: 300 12px $font;
+  
+    & .movie {
+    position: relative;
+    width: 190px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: 45px 5px;
+
+        &__roll {
+            position: absolute;
+            left: 0;
+            top: -75px;
+            width: 100%;
+        } 
+        
+        &__poster {
+            width: 100%;
+            height: 100%;
+            border: 8px solid black;
+            border-radius: 10px;
+            border-top: none;
+        }
+
+        &__info {
+            top: 100%;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            width: inherit;
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            background-color: $white;
+            transition: .3s ease-in-out;
+
+            & h2, b {
+                font-weight: 600;
+            }
+        }
+
+        & h2 {
+            font-size: 15px;
+        }
+    
+        &:hover {
+            cursor: pointer;
+    
+            .movie__info {
+                padding: 5px;
+                height: 100%;
+                top: -8px;
+                border: 8px solid black;
+                border-bottom: none;
+
+                & h2{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    
+        &__title {
+            width: calc(100% - 16px);
+            position: absolute;
+            padding: 10px;
+            left: 8px;
+            bottom: 8px;
+            background-color: rgba(204, 200, 200, 0.75);
+            transition: .3s ease-in-out;
+            font-weight: 600;
+        }
+    }
+
+}
+  
+  
